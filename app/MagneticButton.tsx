@@ -16,7 +16,7 @@ export default function MagneticButton({
   const reset = () => { if (ref.current) ref.current.style.transform = "translate(0,0)"; };
   return (
     <motion.button
-      ref={ref} onMouseMove={onMove} onMouseLeave={reset} whileTap= scale: 0.96 
+      ref={ref} onMouseMove={onMove} onMouseLeave={reset} whileTap={ { scale: 0.96 } }
       className={clsx(
         "rounded-full px-8 py-4 font-display text-sm font-bold transition-shadow duration-300",
         variant === "primary"

@@ -32,7 +32,7 @@ function EnergyNode({ position }: { position: [number, number, number] }) {
 export default function HeroScene() {
   const [dpr, setDpr] = useState(1.5);
   return (
-    <Canvas className="!absolute inset-0" dpr={dpr} gl= antialias: true, powerPreference: "high-performance"  camera= position: [0, 1, 8], fov: 50 >
+    <Canvas className="!absolute inset-0" dpr={dpr} gl={ { antialias: true, powerPreference: "high-performance" } } camera={ { position: [0, 1, 8], fov: 50 } }>
       <PerformanceMonitor onDecline={() => setDpr(1)} />
       <AdaptiveDpr pixelated />
       <color attach="background" args={["#050505"]} />

@@ -28,8 +28,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${body.variable} ${display.variable}`}>
       <head>
-        <script type="application/ld+json" dangerouslySetInnerHTML= __html: JSON.stringify(localBusinessSchema)  />
-        <script type="application/ld+json" dangerouslySetInnerHTML= __html: JSON.stringify(serviceSchema)  />
+        <script type="application/ld+json" dangerouslySetInnerHTML={ { __html: JSON.stringify(localBusinessSchema) } } />
+        <script type="application/ld+json" dangerouslySetInnerHTML={ { __html: JSON.stringify(serviceSchema) } } />
       </head>
       <body className="font-body antialiased">
         <Providers>{children}</Providers>

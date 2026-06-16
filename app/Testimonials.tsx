@@ -14,8 +14,8 @@ export default function Testimonials() {
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
         {REVIEWS.map((r, i) => (
           <motion.div key={r.name}
-            initial= opacity: 0, scale: 0.9  whileInView= opacity: 1, scale: 1 
-            viewport= once: true  transition= delay: i * 0.1 
+            initial={ { opacity: 0, scale: 0.9 } } whileInView={ { opacity: 1, scale: 1 } }
+            viewport={ { once: true } } transition={ { delay: i * 0.1 } }
             className="glass rounded-2xl p-8">
             <p className="text-cyan/90">&ldquo;{r.quote}&rdquo;</p>
             <div className="mt-6 font-display text-white">{r.name}</div>

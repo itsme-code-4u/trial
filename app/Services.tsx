@@ -13,9 +13,9 @@ export default function Services() {
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {SERVICES.map((s, i) => (
           <motion.div key={s}
-            initial= opacity: 0, y: 30  whileInView= opacity: 1, y: 0 
-            viewport= once: true  transition= delay: i * 0.05 
-            whileHover= y: -6 
+            initial={ { opacity: 0, y: 30 } } whileInView={ { opacity: 1, y: 0 } }
+            viewport={ { once: true } } transition={ { delay: i * 0.05 } }
+            whileHover={ { y: -6 } }
             className="glass group rounded-2xl p-6 transition-shadow hover:shadow-glow">
             <div className="mb-4 h-10 w-10 rounded-lg bg-electric/20 shadow-glow" />
             <h3 className="font-display text-lg text-white">{s}</h3>

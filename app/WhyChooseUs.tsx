@@ -28,8 +28,8 @@ export default function WhyChooseUs() {
       <h2 className="mb-16 text-center font-display text-3xl font-black neon-text md:text-5xl">Why Choose VoltX</h2>
       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-6 md:grid-cols-4">
         {STATS.map((s, i) => (
-          <motion.div key={s.label} initial= opacity: 0, y: 30  whileInView= opacity: 1, y: 0 
-            viewport= once: true  transition= delay: i * 0.1 
+          <motion.div key={s.label} initial={ { opacity: 0, y: 30 } } whileInView={ { opacity: 1, y: 0 } }
+            viewport={ { once: true } } transition={ { delay: i * 0.1 } }
             className="glass rounded-2xl p-8 text-center">
             <div className="font-display text-3xl font-black text-electric neon-text md:text-4xl">
               <Counter to={s.value} suffix={s.suffix} />
