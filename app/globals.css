@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --font-display: "Orbitron"; --font-body: "Inter"; }
+html { background: #050505; color-scheme: dark; }
+body { background: #050505; color: #e8f6ff; overflow-x: hidden; }
+
+@layer components {
+  .glass {
+    @apply border border-white/10 bg-white/5 backdrop-blur-xl;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 10px 40px rgba(0,0,0,.5);
+  }
+  .neon-text { text-shadow: 0 0 10px rgba(0,217,255,.6), 0 0 30px rgba(0,217,255,.3); }
+  .energy-line { background: linear-gradient(90deg, transparent, #00D9FF, #7A5CFF, transparent); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,*::before,*::after { animation: none !important; transition: none !important; }
+}
